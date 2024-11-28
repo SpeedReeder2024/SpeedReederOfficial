@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Words</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="navbar-left">
+        <a href="index.html" class="logo">SpeedReeder</a>
+    </div>
+    <div class="navbar-right">
+        <a href="about.html">About</a>
+        <a href="feedback.html">Contact/Feedback</a>
+        <a href="faqs.html">FAQ</a>
+    </div>
+</div>
+
+<!-- Main Content Section -->
+<div id="main-content">
+    <!-- Display Section -->
+    <div id="displaySection">
+        <div class="display-page" id="displayArea"></div>
+    </div>
+
+    <!-- Controls Section -->
+    <div id="controls">
+        <button id="pauseResumeButton">Pause/Resume</button>
+        <button id="backTenWordsButton">Back 10 Words</button>
+        
+        <!-- Speed Slider -->
+        <div class="slider-container">
+            <input type="range" id="speedSlider" min="100" max="1000" step="1" value="300">
+            <div class="slider-notches">
+                <div class="slider-bar"></div>
+                <div class="slider-notch" style="left: 0%;"></div>
+                <div class="slider-notch" style="left: 12.5%;"></div>
+                <div class="slider-notch" style="left: 25%;"></div>
+                <div class="slider-notch" style="left: 37.5%;"></div>
+                <div class="slider-notch" style="left: 50%;"></div>
+                <div class="slider-notch" style="left: 62.5%;"></div>
+                <div class="slider-notch" style="left: 75%;"></div>
+                <div class="slider-notch" style="left: 87.5%;"></div>
+                <div class="slider-notch" style="left: 100%;"></div>
+            </div>
+        </div>
+        <span id="currentSpeed">300 WPM</span>
+    </div>
+
+    <!-- Time Remaining Section -->
+    <div id="timeRemaining">Time Remaining: 0 minutes, 0 seconds</div>
+
+    <!-- Preview Section -->
+    <div class="preview-container" id="previewContainer"></div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button id="theme-toggle" class="theme-toggle">🌙</button>
+<footer>
+    <p>&copy; SpeedReeder 2024. All rights reserved.</p>
+  </footer>
+<script src="app.js"></script>
+</body>
+</html>

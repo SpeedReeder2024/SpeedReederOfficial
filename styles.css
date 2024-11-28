@@ -1,0 +1,270 @@
+/* General Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Light mode background */
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+    width: 100%;
+    z-index: 1000;
+    transition: color 0.3s, background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar.dark-mode {
+    color: #fff;
+}
+
+.navbar-left .logo {
+    font-size: 1.8em;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10vh;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .navbar-left .logo {
+    color: #fff;
+}
+
+.navbar-right {
+    display: flex;
+    padding-right: 10vh;
+    justify-content: flex-end;
+    z-index: 1001;
+}
+
+.navbar-right a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .navbar-right a {
+    color: #fff;
+}
+
+.navbar-right a:hover {
+    color: #388E3C;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .navbar-right a:hover {
+    color: #ff6347;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Main Container */
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 100%;
+    margin-top: 40px; /* Reduced top margin to push the content up */
+    min-height: 80vh; /* Ensures space for centered content */
+}
+
+/* Input Container */
+#inputContainer {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 150px; /* Increased height for better input area */
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+/* File Input */
+#fileInput {
+    display: none;
+}
+
+/* File Upload Button Styled as a Normal Button */
+label[for="fileInput"] {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 0.9em; /* Slightly smaller font size */
+    cursor: pointer;
+    background-color: #73b176; /* Button background color */
+    border: none;
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none; /* Remove underline if any */
+}
+
+label[for="fileInput"]:hover {
+    background-color: #388E3C; /* Darker background on hover */
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode label[for="fileInput"] {
+    background-color: #474747; /* Darker button background in dark mode */
+    color: #fff; /* White text in dark mode */
+}
+
+body.dark-mode label[for="fileInput"]:hover {
+    background-color: #2C6B2F; /* Even darker background on hover in dark mode */
+    border-color: #bbb; /* Light border in dark mode */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Buttons */
+button {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 5px 10px; /* Adjusted padding */
+    margin: 5px;
+    background-color: #388E3C; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #2C6B2F; /* Darker on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode button {
+    background-color: #474747; /* Darker green */
+}
+
+body.dark-mode button:hover {
+    background-color: #2C6B2F; /* Even darker green */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Preview Container */
+.preview-container {
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.9rem; /* Smaller text for preview */
+    color: #999;
+    opacity: 0.8;
+    margin-top: 20px;
+    text-align: left;
+    white-space: pre-wrap;
+    position: relative;
+    overflow-y: auto; /* Allow vertical scroll if needed */
+    max-height: 100px; /* Compact height */
+    transition: opacity 0.5s ease-out; /* Smooth transition */
+}
+
+.highlighted-word {
+    color: red;
+    font-weight: bold;
+}
+
+body.dark-mode .highlighted-word {
+    color: #ff6347;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 60px; /* Adjusted vertical position */
+    left: 20px;
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .theme-toggle {
+    color: #fff;
+}
+
+/* General Scrolling Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Display Area */
+#displayArea {
+    font-size: 3em;
+    margin-top: 20px;
+    color: #333;
+    min-width: 100%;
+    text-align: center;
+    position: absolute; /* Fix the display area in the center of the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to truly center */
+    width: 100%; /* Full width */
+    text-align: center;
+    padding-bottom: 20px; /* Add padding at the bottom for better vertical centering */
+}
+
+/* Footer */
+footer {
+    position: fixed;  /* Fixes the footer at the bottom of the viewport */
+    bottom: 0;        /* Ensures it's positioned at the very bottom */
+    width: 100%;      /* Makes sure it spans the full width of the screen */
+    background-color: #a3c9a5;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px 10px 0 0; /* Optionally round only the top corners */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+    z-index: 1000;    /* Keeps it above other elements */
+}
+
+body.dark-mode footer {
+    background-color: #333;
+}
+#displayButton {
+    font-size:1.2rem;
+    padding:10px 20px;
+}

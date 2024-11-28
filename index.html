@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Text Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar Section -->
+<div class="navbar">
+    <div class="navbar-left">
+        <a href="index.html" class="logo">SpeedReeder</a>
+    </div>
+    <div class="navbar-right">
+        <a href="about.html">About</a>
+        <a href="feedback.html">Contact/Feedback</a>
+        <a href="faqs.html">FAQ</a>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div id="mainContainer">
+    <!-- Input Section -->
+    <div id="inputContainer">
+        <h1>The SpeedReeder</h1>
+        <textarea id="textInput" placeholder="Enter or paste text here, or upload a png or pdf file below."></textarea>
+        <input type="file" id="fileInput" accept=".png, .pdf" />
+        <label for="fileInput">Upload a File</label>
+        <button id="displayButton">Display Words</button>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button id="theme-toggle" class="theme-toggle">🌙</button>
+<footer>
+    <p>&copy; SpeedReeder 2024. All rights reserved.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

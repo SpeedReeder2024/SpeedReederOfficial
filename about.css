@@ -1,0 +1,254 @@
+/* Base Styling for About Page */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light mode background */
+    color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    overflow: auto; /* Allow scrolling if necessary */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #fff; /* Light text for dark mode */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+    width: 100%;
+    z-index: 1000;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar.dark-mode {
+    color: #fff;
+}
+
+.navbar-left .logo {
+    font-size: 1.8em;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10vh;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .navbar-left .logo {
+    color: #fff;
+}
+
+.navbar-right {
+    display: flex;
+    padding-right: 10vh;
+    justify-content: flex-end;
+    z-index: 1001;
+}
+
+.navbar-right a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .navbar-right a {
+    color: #fff;
+}
+
+.navbar-right a:hover, .navbar-right a:focus {
+    color: #388E3C; /* Light green on hover/focus */
+    transition: color 0.3s ease; /* Gradual color change */
+}
+
+body.dark-mode .navbar-right a:hover, body.dark-mode .navbar-right a:focus {
+    color: #ff6347; /* Tomato red on hover/focus in dark mode */
+}
+
+/* Header Styling */
+header {
+    padding-top: 100px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    transition: color 0.5s ease; /* Smooth transition */
+}
+
+/* Decorative Line Under Header */
+header::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: white;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Intro Section */
+.about-intro {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+.about-intro h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #388E3C;
+    margin-bottom: 20px;
+    transition: color 0.5s ease; /* Smooth transition */
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    background: linear-gradient(90deg, rgba(56, 142, 60, 0.1), rgba(255, 99, 71, 0.2));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: color 0.5s ease, background 0.5s ease; /* Smooth transition */
+}
+
+body.dark-mode .about-intro {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .about-intro h2 {
+    color: white;
+}
+
+body.dark-mode .about-intro p {
+    color: #ddd;
+    background: linear-gradient(90deg, rgba(56, 142, 60, 0.15), rgba(255, 99, 71, 0.2));
+}
+
+/* Mission Section */
+.mission {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+.mission h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #388E3C;
+    margin-bottom: 20px;
+    transition: color 0.5s ease; /* Smooth transition */
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    background: linear-gradient(90deg, rgba(56, 142, 60, 0.1), rgba(255, 99, 71, 0.2));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: color 0.5s ease, background 0.5s ease; /* Smooth transition */
+}
+
+body.dark-mode .mission {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .mission h2 {
+    color: #ff6347;
+}
+
+body.dark-mode .mission p {
+    color: #ddd;
+    background: linear-gradient(90deg, rgba(56, 142, 60, 0.15), rgba(255, 99, 71, 0.2));
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: #388E3C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+body.dark-mode footer {
+    background-color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .about-intro, .mission {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .about-intro h2, .mission h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-intro p, .mission p {
+        font-size: 1rem;
+    }
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+body.dark-mode .theme-toggle {
+    color: #fff;
+}
